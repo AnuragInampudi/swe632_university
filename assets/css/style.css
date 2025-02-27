@@ -1,0 +1,70 @@
+/* assets/css/style.css */
+
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar styling */
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* Reusable logo class */
+.logo {
+    width: 100px;
+  }
+
+/* Offcanvas customization */
+.offcanvas {
+    background-color: #fff;
+}
+
+/* Footer styling */
+footer {
+    font-size: 0.9rem;
+}
+
+/* Ensure offcanvas sidebar is aligned on the left */
+.offcanvas-start {
+    left: 0;
+  }
+  
+  /* Make sure the navigation items inside the offcanvas are left-aligned */
+  .offcanvas-body .nav {
+    text-align: left;
+  }
+  
+  .offcanvas-body .nav .nav-link {
+    padding-left: 15px; /* Optional: adjust for extra left padding */
+  }
+  
+
+/* Chat widget styling */
+#chatWidget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Accessibility: Dark Mode (toggle by adding .dark-mode class to body) */
+.dark-mode {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.dark-mode .card {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+.dark-mode .navbar, .dark-mode .offcanvas {
+    background-color: #212529;
+}
+
+.dark-mode .table {
+    color: #ffffff;
+}
