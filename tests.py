@@ -17,9 +17,8 @@ class UniversityPortalTests(unittest.TestCase):
     def test_index_page_role_navigation(self):
         """Test that the role selection on the index page correctly navigates to each portal."""
         driver = self.driver
-        # Replace with the correct path or URL to your index.html file.
-        driver.get("https://anuraginampudi.github.io/swe632_university/student.html")
-
+        # Use the hosted index page URL.
+        driver.get("https://anuraginampudi.github.io/swe632_university/index.html")
         
         # Verify that the header contains the correct title.
         header_title = driver.find_element(By.TAG_NAME, "h1").text
@@ -34,8 +33,7 @@ class UniversityPortalTests(unittest.TestCase):
         self.assertEqual(dashboard_heading, "Dashboard")
         
         # Navigate back to index.
-        driver.get("https://anuraginampudi.github.io/swe632_university/student.html")
-
+        driver.get("https://anuraginampudi.github.io/swe632_university/index.html")
         
         # Test navigation to University Admin Portal.
         admin_link = driver.find_element(By.LINK_TEXT, "Login as University Admin")
@@ -45,8 +43,7 @@ class UniversityPortalTests(unittest.TestCase):
         self.assertIn("Admin Portal", admin_portal_title)
         
         # Navigate back to index.
-        driver.get("https://anuraginampudi.github.io/swe632_university/student.html")
-
+        driver.get("https://anuraginampudi.github.io/swe632_university/index.html")
         
         # Test navigation to Financial Aid Admin Portal.
         financial_link = driver.find_element(By.LINK_TEXT, "Login as Financial Aid Admin")
@@ -58,9 +55,8 @@ class UniversityPortalTests(unittest.TestCase):
     def test_student_major_selection_modal(self):
         """Test that the major selection assistant on the student page works and displays the modal."""
         driver = self.driver
-        # Replace with the correct path or URL to your student.html file.
+        # Use the hosted student page URL.
         driver.get("https://anuraginampudi.github.io/swe632_university/student.html")
-
         
         # Fill in the "Interests" and "Strengths" fields.
         interests_input = driver.find_element(By.ID, "interests")
@@ -92,3 +88,4 @@ class UniversityPortalTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
